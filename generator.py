@@ -8,10 +8,8 @@ def genfiles(dir):
     lst = os.listdir(dir)
     while i < 100:
         way = random.randint(0,len(lst)-1)
-        print(way)
         tm = time.gmtime(time.time())
         if not os.path.exists(dir+'\\'+lst[way]+'\\'+str(tm.tm_year)):
-            print(dir+'\\'+lst[way]+'\\'+str(tm.tm_year))
             os.mkdir(dir+'\\'+lst[way]+'\\'+str(tm.tm_year))
         if not os.path.exists(dir+'\\'+lst[way]+'\\'+str(tm.tm_year)+'\\'+str(tm.tm_mon)):
             os.mkdir(dir+'\\'+lst[way]+'\\'+str(tm.tm_year)+'\\'+str(tm.tm_mon))
